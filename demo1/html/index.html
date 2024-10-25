@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- external css -->
+    <link rel="stylesheet" href="..\css\style.css">
+    <!-- external JavaScript to understand defer-->
+    <script src="..\js\script2.js" defer></script>
+    <title>JavaScript Demo1</title>
+</head>
+
+<body onload="alert('Page loaded!')">
+
+    <!-- Different types of Basic JavaScript Events -->
+    <h1>Basic JavaScript Events</h1>
+
+    <hr>
+    <h3>1. onclick</h3>
+    <button onclick="showData('onclickBtnData')">Click me</button>
+    <div id="onclickBtnData" style="display: none;">Button clicked</div>
+
+    <hr>
+    <h3>2. onmouseover</h3>
+    <p id="onmouseoverData" onmouseover="changeTextStyle('onmouseoverData')">This is some text to test onmouseover
+        event.</p>
+
+    <hr>
+    <h3>3. onmouseout</h3>
+    <p id="onmouseoutData" onmouseout="changeTextStyle('onmouseoutData')">This is some text to test onmouseout event.
+    </p>
+
+    <hr>
+    <h3>4. onkeydown</h3>
+    <input type="text" onkeydown="showData('onkeydownData')" placeholder="Press any Key">
+    <div id="onkeydownData" style="display: none;">Key Pressed</div>
+
+    <hr>
+    <h3>5. onload</h3>
+    <p>Refress and check</p>
+
+    <hr>
+    <h3>6. onchange</h3>
+    <input type="text" id="onchangeInput" onchange="showData('onchangeData')" placeholder="Change something">
+    <div id="onchangeData" style="display: none;">something changed</div>
+
+    <hr>
+    <h3>7. onsubmit</h3>
+    <form onsubmit="showData('onsubmitData'); return false;">
+        <input type="submit" value="Submit">
+    </form>
+    <div id="onsubmitData" style="display: none;">Form Submitted</div>
+
+    <hr>
+    <h3>8. onfocus</h3>
+    <input type="text" id="onfocusData" onfocus="changeBackground('onfocusData')" placeholder="Focus on me">
+
+    <hr>
+    <h3>9. onblur</h3>
+    <input type="text" id="onblurData" onblur="changeBackground('onblurData')" placeholder="Click and then click away">
+
+    <hr>
+    <h3>10. ondblclick </h3>
+    <button ondblclick="showData('ondblclickBtnData')">Double Click me</button>
+    <div id="ondblclickBtnData" style="display: none;">Button double clicked</div>
+
+    <hr>
+
+    <h3>11. manually triggering change event</h3>
+    <button onclick="manuallyTrigger()">click to triger 6. onchange</button>
+
+
+    <!-- some basic JavaScript validation  -->
+    <h1>Basic JavaScript Validation</h1>
+
+    <hr>
+
+    <form id="myForm" onsubmit="return validateForm()" novalidate>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <div id="usernameError" class="error"></div>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <div id="emailError" class="error"></div>
+
+        <label for="phoneNumber">Phone number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required>
+        <div id="phoneNumberError" class="error"></div>
+
+
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password" required>
+        <div id="passwordError" class="error"></div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- external JavaScript -->
+    <script src="..\js\script.js" ></script>
+</body>
+
+</html>

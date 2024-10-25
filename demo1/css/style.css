@@ -1,0 +1,33 @@
+
+/* general styling  */
+body {
+    font-family: Arial, sans-serif;
+    margin: 50px;
+}
+
+/* "Basic JavaScript Validation" section styling  */
+#myForm {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 5px 0;
+}
+
+#myForm > input {
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+}
+
+button[type = submit] {
+    width: 100px ;
+}
+
+.error {
+    color: red;
+    font-size: 15px;
+}
